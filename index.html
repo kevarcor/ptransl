@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Trans Logistic - Transporte y Logística Global</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header sticky-top bg-white shadow-sm py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="logo mb-0"><img src="LOGO.svg" style="width: 50px;" alt="logo"> PORT TRANS LOGISTIC</h1>
+            <nav class="main-nav d-none d-lg-flex">
+                <a href="#nosotros" class="nav-link text-dark mx-3" data-lang-key="nav_about">Nosotros</a>
+                <a href="#servicios" class="nav-link text-dark mx-3" data-lang-key="nav_services">Servicios</a>
+                <a href="#proceso" class="nav-link text-dark mx-3" data-lang-key="nav_process">Proceso</a>
+                <a href="#contacto" class="btn btn-primary-custom" data-lang-key="nav_contact">Contacto</a>
+            </nav>
+            <div class="header-actions d-flex align-items-center">
+                <button id="lang-toggle" class="btn-lang btn btn-outline-secondary me-2" aria-label="Cambiar idioma a Inglés">EN</button>
+                <button class="menu-toggle btn btn-outline-dark d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse d-lg-none" id="navbarNav">
+            <div class="container">
+                <ul class="navbar-nav w-100 text-center">
+                    <li class="nav-item"><a href="#nosotros" class="nav-link text-dark py-2" data-lang-key="nav_about">Nosotros</a></li>
+                    <li class="nav-item"><a href="#servicios" class="nav-link text-dark py-2" data-lang-key="nav_services">Servicios</a></li>
+                    <li class="nav-item"><a href="#proceso" class="nav-link text-dark py-2" data-lang-key="nav_process">Proceso</a></li>
+                    <li class="nav-item mt-2"><a href="#contacto" class="btn btn-primary-custom w-75" data-lang-key="nav_contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="portada" class="hero-section hero-video-bg py-5 py-md-5" style="height: 900px;">
+            
+            <div class="video-background">
+                <video autoplay loop muted playsinline poster="imagen.jpeg">
+                    <source src="videoptl.mp4" type="video/mp4">
+                    Tu navegador no soporta videos en HTML5.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <div class="container hero-content-overlay d-flex flex-column flex-lg-row align-items-center justify-content-between text-center text-lg-start">
+                <div class="hero-content col-lg-7">
+                    <h2 class="display-3 fw-bold mb-4 text-white" data-lang-key="hero_title"> <img src="LogoComplt.svg" alt="Logo PTL" style="width: 600px; filter: drop-shadow(0px 5px 10px rgb(255, 255, 255)); "></h2>
+                    <p class="lead lecturafondo mb-5 text-white-50" data-lang-key="hero_subtitle">Conectamos tu negocio con el mundo a través de soluciones de transporte rápidas, seguras y adaptables.</p>
+                    <a href="#servicios" class="btn btn-primary-custom btn-lg" data-lang-key="hero_cta">Descubre nuestros servicios</a>
+                </div>
+                </div>
+        </section>
+
+        <hr class="separator my-5">
+
+        <section id="nosotros" class="info-section py-5 fade-in-up">
+            <div class="container text-center">
+                <h3 class="h1 fw-bold mb-4" data-lang-key="about_title">Quiénes Somos</h3>
+                <p class="lead col-lg-8 mx-auto text-muted" data-lang-key="about_text">
+                    🔷 Fundada el 15 de Agosto del 2016. <br>
+                    🔷 Dedicada al transporte terrestre de contenedores. <br>
+                    🔷 Ubicados en el puerto de Lázaro Cárdenas,Michoacán. <br>
+                    🔷 Certificados en norma ISO 9001:2015. <br>
+                </p>
+            </div>
+        </section>
+
+        <hr class="separator my-5">
+
+        <section id="servicios" class="services-section bakg py-5">
+            <div class="container text-center">
+                <h3 class="h1 fw-bold mb-5" data-lang-key="services_title" style="text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; ">Nuestros Servicios</h3>
+                <div class="row g-4">
+                    <div class="col-md-4 fade-in-up">
+                        <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" data-bs-toggle="modal" data-bs-target="#modalTerrestre">
+                            <i class="fa-solid fa-truck-fast service-icon mb-3"></i>
+                            <h4 class="h5 fw-bold" data-lang-key="service_terrestre_title">Transporte Terrestre</h4>
+                            <p class="text-secondary" data-lang-key="service_terrestre_text_short">Rutas optimizadas y la flota más moderna...</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4 fade-in-up">
+                        <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" data-bs-toggle="modal" data-bs-target="#modalRuta">
+                            <i class="fa-solid fa-route service-icon mb-3"></i>
+                            <h4 class="h5 fw-bold" data-lang-key="service_control_title">Control de Ruta Inteligente</h4>
+                            <p class="text-secondary" data-lang-key="service_control_text">Monitoreo en tiempo real 24/7 y sistemas GPS avanzados para asegurar la trazabilidad y eficiencia total de su envío.</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4 fade-in-up">
+                        <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" data-bs-toggle="modal" data-bs-target="#modalPatio">
+                            <i class="fa-solid fa-warehouse service-icon mb-3"></i>
+                            <h4 class="h5 fw-bold" data-lang-key="service_infra_title">Infraestructura en Patio</h4>
+                            <p class="text-secondary" data-lang-key="service_infra_text">Espacios seguros y optimizados para el manejo, inspección y resguardo temporal de su mercancía.</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator my-5">
+
+        <section id="proceso" class="process-section py-5 fade-in-up">
+            <div class="container text-center">
+                <h3 class="h1 fw-bold mb-5" data-lang-key="process_title">Nuestro Proceso de Transporte Detallado</h3>
+                <div class="row process-steps justify-content-center">
+                    
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-file-earmark-post"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step1_title">RECEPCIÓN DE MANIOBRAS</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-person-vcard"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step2_title">DATOS DE UNIDAD</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-router"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step3_title">REGISTRO DE UNIDAD EN ASLA</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-shield-check"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step4_title">INGRESO A PUERTO</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-collection"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step5_title">CARGA DE CONTENEDORES</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row process-steps justify-content-center">
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-stoplights"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step6_title">RESULTADO DE MODULACIÓN</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-truck"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step7_title">LIBERACIÓN DE EMBARQUE</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-map"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step8_title">INICIO DE RUTA</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-geo-alt"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step9_title">LLEGADA A DESTINO</h4>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2-4 mb-4">
+                        <div class="step-item">
+                            <div class="step-number mb-3"><i class="bi bi-truck-flatbed"></i></div>
+                            <h4 class="h6 fw-bold" data-lang-key="step10_title">INGRESO DE VACÍOS</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator my-5">
+        
+        <section id="unidad-info" class="unit-info-section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                        <h3 class="fw-bold mb-4" data-lang-key="unit_info_title">Información de la Unidad</h3>
+                        <div class="phone-svg-container">
+                            <svg viewBox="0 0 100 100" class="phone-svg">
+                                <rect x="30" y="10" width="40" height="80" rx="8" ry="8" fill="none" stroke="#13264c" stroke-width="2"/>
+                                <line x1="45" y1="14" x2="55" y2="14" stroke="#13264c" stroke-width="1"/>
+                                <circle cx="50" cy="85" r="2" fill="#13264c"/>
+                                
+                                <rect x="32" y="18" width="36" height="60" fill="#f8f8f8"/>
+                                
+                                <path d="M 35 70 L 40 60 L 50 65 L 65 50 L 60 40 L 50 45 L 45 30 L 65 30" fill="none" stroke="#0053a1" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="65" cy="30" r="1.5" fill="#e74c3c"/> <circle cx="35" cy="70" r="1.5" fill="#2ecc71"/> <rect x="75" y="30" width="4" height="15" rx="1" fill="#e74c3c" class="alert-message right-alert"/>
+                                <rect x="21" y="55" width="4" height="15" rx="1" fill="#2ecc71" class="alert-message left-alert"/>
+                            </svg>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-lg-4">
+                        
+                        <ul class="list-group list-group-flush shadow-sm rounded-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center" data-lang-key="unit_placas">
+                                <strong>PLACAS</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" data-lang-key="unit_economico">
+                                <strong>ECONÓMICO</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" data-lang-key="unit_operador">
+                                <strong>NOMBRE DEL OPERADOR</strong>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" data-lang-key="unit_licencia">
+                                <strong>NÚMERO DE LICENCIA</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-cta-section py-5">
+            <div class="container bg-primary-custom-light p-5 rounded-4 shadow">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                        <h3 class="display-6 fw-bold text-dark mb-3" data-lang-key="contact_cta_main_title">¿Listo para impulsar tu logística?</h3>
+                        <p class="lead text-gray-50" data-lang-key="contact_cta_text">Agenda una llamada o envíanos un mensaje. Nuestro equipo está listo para crear tu solución personalizada.</p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <form class="contact-form-simple bg-white p-4 rounded-3 shadow-sm">
+                            <h4 class="h5 fw-bold mb-3 text-dark" data-lang-key="contact_form_title">Contacto Rápido</h4>
+                            <input type="text" class="form-control mb-2" placeholder="Nombre" required>
+                            <input type="email" class="form-control mb-3" placeholder="Email o Teléfono" required>
+                            <button type="submit" class="btn btn-primary-custom w-100" data-lang-key="contact_cta_button">Hablar con un experto</button>
+                            <br>
+                            <button type="submit" href="https://wa.me/525512345678?text=Hola%2C%20me%20gustaria%20saber%20mas%20informacion" data-lang-key="contact_wha_button" target="_blank" aria-label="Contactar por WhatsApp" class="btn btn-success-custom w-100">Contactar por WhatsApp</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MOODALS -->
+
+    <div class="modal fade" id="modalTerrestre" tabindex="-1" aria-labelledby="modalTerrestreLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold text-primary-custom" id="modalTerrestreLabel">Transporte Terrestre</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Detalle del Servicio:</strong></p>
+                <p>FALTA DESCRIPCION DEL SERVICIO</p>
+                <ul>
+                    <li>Unidades de modelos recientes.</li>
+                    <li>Sistema de rastreo satelital.</li>
+                    <li>Sistema Anti Jammer.</li>
+                    <li>Botón de pánico.</li>
+                    <li>Bloqueo de motor.</li>
+                    <li>Póliza de seguro covertura amplia.</li> 
+                    <li>Unidades con autorización expresa doble articulado.</li>
+                </ul>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+                <a href="#contacto" class="btn btn-primary-custom">Cotizar</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRuta" tabindex="-1" aria-labelledby="modalRutaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold text-primary-custom" id="modalRutaLabel">Control de Ruta Inteligente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Detalle del Servicio:</strong></p>
+                <p>FALTA DESCRIPCION DEL SERVICIO</p>
+                <ul>
+                    <li>Rastreos satelitales con las empresas SKY ANGEL, SITRACK y ENCOTRACK lideres en geo localización.</li>
+                    <li>Salidas en tiempo.</li>
+                    <li>Actualización de estatus con la frecuencia que se solicite.</li>
+                    <li>Notificaciones en tiempo real.</li>
+                    <li>Reportes detallados de ruta.</li>
+                    <li>Análisis de ruta (paradas autorizadas, focos rojos).</li>
+                    <li>Comunicación Efectiva.</li>
+                </ul>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+                <a href="#contacto" class="btn btn-primary-custom">Cotizar</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPatio" tabindex="-1" aria-labelledby="modalPatioLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold text-primary-custom" id="modalPatioLabel">Infraestructura en Patio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Detalle del Servicio:</strong></p>
+                <p>FALTA DESCRIPCION DEL SERVICIO</p>
+                <ul>
+                    <li>Área de 2.7 hectáreas</li>
+                    <li>Control de acceso</li>
+                    <li>Barda perimetral</li>
+                    <li>Iluminación</li>
+                    <li>CCTV</li>
+                    <li>A solo 3.84km de la salida del puerto</li>
+                </ul>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+                <a href="#contacto" class="btn btn-primary-custom">Cotizar</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://wa.me/525512345678?text=Hola%2C%20me%20gustaria%20saber%20mas%20informacion" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="main-footer bg-dark-custom py-4 text-white">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 footer-info mb-3 mb-md-0">
+                    <h4 class="text-primary-custom mb-2">Port Trans Logistic</h4>
+                    <p class="text-secondary-custom small mb-0" data-lang-key="footer_email">Email: operaciones@ptransl.com</p>
+                    <p class="text-secondary-custom small" data-lang-key="footer_phone">Tel: +52 753 102 9665</p>
+                </div>
+                <div class="col-md-6 footer-social text-md-end">
+                    <h4 class="text-white mb-2" data-lang-key="footer_social_title">Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" aria-label="Facebook" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" aria-label="Twitter" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center border-secondary-subtle pt-3 mt-3">
+            <p class="small text-secondary-custom mb-0" data-lang-key="footer_copy">© 2025 Port Trans Logistic. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

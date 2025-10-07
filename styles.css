@@ -1,0 +1,455 @@
+/* Variables de Color Personalizadas */
+:root {
+    --color-dark: #13264c; /* Azul Marino Oscuro */
+    --color-primary: #0053a1; /* Azul Brillante/Medio */
+    --color-secondary: #afafb2; /* Gris Suave */
+    --color-white: #ffffff;
+    --color-light-bg: #f8f8f8; /* Fondo sutil para secciones */
+    --font-family: 'Inter', sans-serif;
+}
+
+/* -------------------------------------------------- */
+/* BASE: Sobrescribiendo la Tipografía de Bootstrap */
+/* -------------------------------------------------- */
+body {
+    font-family: var(--font-family);
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-white);
+}
+
+/* -------------------------------------------------- */
+/* COLORES PERSONALIZADOS (Usados como Clases en HTML) */
+/* -------------------------------------------------- */
+/* Fondo Oscuro Personalizado para Footer */
+.bg-dark-custom {
+    background-color: var(--color-dark) !important;
+}
+/* Color Primario Personalizado (Texto en Footer) */
+.text-primary-custom {
+    color: var(--color-primary) !important;
+}
+/* Color Secundario Personalizado (Texto Suave) */
+.text-secondary-custom {
+    color: var(--color-secondary) !important;
+}
+
+/* -------------------------------------------------- */
+/* BOTONES PERSONALIZADOS */
+/* -------------------------------------------------- */
+.btn-primary-custom {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease, border-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #004586; /* Tono más oscuro de azul */
+    border-color: #004586;
+    color: var(--color-white);
+    transform: translateY(-2px); /* Efecto 3D sutil */
+}
+
+/* Botón de Idioma */
+.btn-lang {
+    font-weight: 600;
+    border: 1px solid var(--color-secondary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-lang:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white) !important;
+}
+
+/* -------------------------------------------------- */
+/* SECCIONES Y ELEMENTOS */
+/* -------------------------------------------------- */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+/* Estilos de los enlaces de navegación */
+.main-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid var(--color-secondary);
+    width: 80%;
+    margin: 60px auto;
+}
+
+/* -------------------------------------------------- */
+/* SECCIÓN PORTADA (HERO) - VIDEO DE FONDO */
+/* -------------------------------------------------- */
+
+.hero-video-bg {
+    position: relative; /* Es el contenedor de referencia */
+    overflow: hidden; /* Oculta partes del video que se salen del marco */
+    padding-top: 100px !important; /* Ajusta el padding para dar espacio vertical */
+    padding-bottom: 100px !important; 
+    /* Quitamos el color de fondo para que se vea el video */
+    background: none; 
+}
+
+/* Contenedor del video */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* El video en sí, forzado a cubrir el área */
+.video-background video {
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Truco para centrar y asegurar que cubra todo */
+    transform: translate(-50%, -50%); 
+    object-fit: cover; /* Asegura que cubra sin distorsión */
+}
+
+/* Capa Oscura (Overlay) para legibilidad del texto */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Negro con 40% de opacidad */
+    z-index: 1;
+}
+
+/* Contenido de texto (Aseguramos que esté al frente) */
+.hero-content-overlay {
+    position: relative;
+    z-index: 2; /* Siempre encima del video y del overlay */
+}
+
+/* Ajustamos el texto dentro del hero para que sea blanco */
+.hero-content h2.text-white {
+    color: var(--color-white) !important;
+}
+
+/* Eliminamos los estilos del antiguo SVG si aún existieran */
+.hero-image {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section h2 {
+    color: var(--color-dark);
+}
+
+/* Servicios Iconos */
+.service-icon {
+    font-size: 3.5rem; /* Más grande para destacar */
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* Estilo del Timeline de Proceso (Línea conectora) */
+.process-steps {
+    position: relative;
+}
+
+/* Línea de conexión horizontal para escritorio */
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 50px; /* Centrado verticalmente entre pasos */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--color-secondary);
+    z-index: 0;
+    display: none; /* Ocultar por defecto, se activa en desktop */
+}
+
+@media (min-width: 992px) {
+    .process-steps::before {
+        display: block; /* Mostrar solo en escritorio */
+    }
+}
+
+.step-item {
+    position: relative;
+    z-index: 1; /* Asegura que los círculos estén sobre la línea */
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.step-item:hover .step-number {
+    background-color: var(--color-dark); /* Cambio de color al hacer hover */
+}
+
+/* FOOTER - Redes Sociales */
+.social-icons a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-primary) !important;
+    transform: scale(1.1);
+}
+
+.bakg {
+    background-image: url('fondo.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+/* -------------------------------------------------- */
+/* ANIMACIONES CSS (Mantenidas) */
+/* -------------------------------------------------- */
+
+/* Animación de Entrada (usada por JS) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+}
+
+.fade-in-up.visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in-up:nth-child(2) { animation-delay: 0.15s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+
+/* Animación de la línea SVG (estilo dibujo) */
+.svg-anim #truck-body {
+    stroke-dasharray: 400; 
+    stroke-dashoffset: 400;
+    animation: draw 2s ease-in-out forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; 
+    color: var(--color-white);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    z-index: 1000;
+    box-shadow: 2px 2px 3px #999;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    animation: none;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVIDAD (Ajustes de Bootstrap) */
+/* -------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    /* Ocultar la barra de navegación principal en móvil */
+    .main-nav {
+        display: none !important;
+    }
+    
+    .hero-section .display-3 {
+        font-size: 2.5rem !important;
+        /*box-shadow: 0 0 200px 100px rgb(255, 255, 255); */
+        filter: drop-shadow(5px 5px 10px rgb(255, 255, 255)); 
+    }
+    
+    .process-steps::before {
+        display: none;
+    }
+
+    .footer-social {
+        text-align: start !important;
+    }
+}
+
+/* Modificación en styles.css */
+
+.main-header {
+    /* Degradado sutil de arriba a abajo: del blanco (#f8f8f8) al fondo claro (#ffffff) */
+    background: linear-gradient(to bottom, var(--color-light-bg) 0%, var(--color-white) 100%);
+    /* Eliminamos la sombra de Bootstrap para un look más limpio, pero puedes dejarla si prefieres */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important; 
+    transition: background 0.3s ease;
+}
+
+/* Ajuste de enlaces para asegurar que se vean bien sobre el degradado */
+.main-nav .nav-link {
+    color: var(--color-dark) !important;
+    font-weight: 500;
+}
+
+.main-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* El botón CTA se mantiene con el estilo btn-primary-custom */
+
+.lecturafondo {
+    backdrop-filter: blur(10px);
+    text-shadow: 2px 2px black;
+    }
+
+/* Estilo para que el bloque de servicio parezca clickeable */
+.service-item-trigger {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-item-trigger:hover {
+    box-shadow: 0 10px 20px rgba(0, 83, 161, 0.1) !important; /* Sombra sutil con el color primario */
+    transform: translateY(-5px);
+    text-decoration: none; /* Evita el subrayado del enlace */
+}
+
+/* Estilos para el Footer */
+.main-footer .footer-info h4 {
+    color: var(--color-primary) !important; /* Mantenemos el logo en azul brillante */
+}
+
+/* El separador vertical es manejado por clases de Bootstrap: border-end y border-secondary-subtle */
+
+/* -------------------------------------------------- */
+/* PROCESO DE TRANSPORTE (Ajuste para 10 pasos) */
+/* -------------------------------------------------- */
+
+/* Usamos un sistema de grid más flexible */
+.col-lg-2-4 {
+    /* Cálculo para 5 elementos por fila en desktop (100% / 5 = 20%) */
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+@media (max-width: 991.98px) {
+    /* En tablet y mobile, volvemos a 2 columnas */
+    .col-lg-2-4 {
+        width: 50%;
+    }
+}
+
+/* -------------------------------------------------- */
+/* NUEVA SECCIÓN: DATOS DE LA UNIDAD */
+/* -------------------------------------------------- */
+
+.unit-info-section {
+    background-color: var(--color-light-bg) !important;
+}
+
+.phone-svg-container {
+    width: 100%;
+    /* 🟢 MODIFICACIÓN: Aumentamos el tamaño máximo del celular */
+    max-width: 280px; 
+    margin: 0 auto;
+    animation: vibrate-pause 2s infinite; 
+}
+
+/* 🟢 Animación de Vibración Pausada */
+@keyframes vibrate-pause {
+    /* 0% a 50%: La vibración ocurre aquí (1 segundo) */
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    12.5% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    25% { transform: translate(1px, -1px) rotate(0.5deg); }
+    37.5% { transform: translate(-1px, 1px) rotate(-0.25deg); }
+    50% { transform: translate(0px, 0px) rotate(0deg); } /* Termina la vibración */
+    
+    /* 50% a 100%: En reposo (1 segundo) */
+    50.01% { transform: translate(0px, 0px) rotate(0deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/* Estilo para los mensajes de alerta SVG */
+.alert-message {
+    opacity: 0; /* Oculto por defecto */
+    animation: flash-alert 4s infinite;
+}
+
+/* Animación sutil para los mensajes de alerta */
+@keyframes flash-alert {
+    0%, 50%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+}
+
+/* Aplicar desfase para que parpadeen de manera independiente */
+.right-alert {
+    animation-delay: 0.5s;
+}
+.left-alert {
+    animation-delay: 2.5s;
+}
+
+/* Estilo para la lista de datos (limpio y minimalista) */
+.list-group-item {
+    background-color: var(--color-white);
+    border-color: rgba(0, 0, 0, 0.05); /* Borde muy suave */
+    padding: 15px 20px;
+}
+
+.list-group-item strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.list-group-item span {
+    color: var(--color-dark);
+    font-weight: 400;
+}
