@@ -34,6 +34,26 @@ body {
     color: var(--color-secondary) !important;
 }
 
+/* Estilos para el servicio con imagen de fondo */
+.service-bg-1 {
+    /* Moviendo los estilos del HTML aquí */
+    background-image: linear-gradient(to bottom,#3b419500 10%, #ffffffb7 90%), url('./fondoserv1.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Aseguramos que el fondo no afecte el color de texto del servicio 1 y 3 */
+    background-color: transparent !important; 
+    border: none;
+}
+
+.txt-secon{
+    color: #13264c;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7), /* Sombra blanca */
+               0 0 1em rgb(255, 255, 255), /* Otra sombra para efecto */
+               0 0 0.2em rgb(255, 255, 255);
+}
+
 /* -------------------------------------------------- */
 /* BOTONES PERSONALIZADOS */
 /* -------------------------------------------------- */
@@ -144,6 +164,16 @@ body {
 /* Ajustamos el texto dentro del hero para que sea blanco */
 .hero-content h2.text-white {
     color: var(--color-white) !important;
+}
+
+.services-section h4.titulo{
+    font-size: 25px;
+    color: white;
+          text-shadow: 1px 1px 2px rgba(5, 5, 5, 0.7), /* Sombra blanca */
+               0 0 1em rgb(0, 0, 0), /* Otra sombra para efecto */
+               0 0 0.2em rgb(0, 0, 0);
+/*     -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0); */
 }
 
 /* Eliminamos los estilos del antiguo SVG si aún existieran */

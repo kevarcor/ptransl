@@ -20,6 +20,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    var lightboxModal = document.getElementById('lightboxModal');
+    var lightboxImage = document.getElementById('lightboxImage');
+    var lightboxCaption = document.getElementById('lightboxCaption');
+    
+    // Obtener todos los enlaces de la galería
+    var galleryLinks = document.querySelectorAll('.gallery-grid a');
+    
+    galleryLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Evitar que el enlace navegue
+            
+            var photoSrc = this.getAttribute('data-photo-src');
+            var photoAlt = this.getAttribute('data-photo-alt');
+            
+            // Cargar la imagen y la descripción en el modal Lightbox
+            lightboxImage.src = photoSrc;
+            lightboxImage.alt = photoAlt;
+            lightboxCaption.textContent = photoAlt;
+            
+            // El modal se abre gracias a los atributos data-bs-toggle/target
+        });
+    });
+
+    var lightboxModal = document.getElementById('lightboxModal');
+    var modalPatio = document.getElementById('modalPatio');
+
+    // 🟢 FUNCIÓN PARA REABRIR EL MODAL DE SERVICIO AL CERRAR LIGHTBOX
+    lightboxModal.addEventListener('hidden.bs.modal', function (event) {
+        // Obtenemos el elemento modal de Bootstrap
+        var modalPatioInstance = bootstrap.Modal.getInstance(modalPatio);
+
+        // Si el modal de Patio NO está abierto, lo abrimos
+        // Esto evita abrirlo dos veces si el usuario ya lo está cerrando manualmente.
+        if (!modalPatioInstance) {
+            var bsModal = new bootstrap.Modal(modalPatio);
+            bsModal.show();
+        }
+    });
+
     // --- 2. Funcionalidad de Cambio de Idioma (Español/Inglés) ---
     
     // Diccionario de Traducciones
@@ -53,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'step4_text': 'Descarga segura y confirmación final.',
             'contact_title': 'Contáctanos',
             'contact_cta': 'Enviar Consulta',
-            'footer_email': 'Email: operaciones@ptransl.com',
+            'footer_email': 'Email: rmunoz@ptransl.com',
             'footer_phone': 'Tel: +52 753 102 9665',
             'footer_social_title': 'Síguenos',
             'footer_copy': '© 2025 Port Trans Logistic. Todos los derechos reservados.',
@@ -78,7 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'unit_economico': 'ECONÓMICO',
             'unit_operador': 'NOMBRE DEL OPERADOR',
             'unit_licencia': 'NÚMERO DE LICENCIA',
-            'contact_wha_button': 'Contactar por WhatsApp'
+            'contact_wha_button': 'Contactar por WhatsApp',
+            'service_terrestre_detail': '<p><strong>Detalle del Servicio:</strong></p><p>Te ofrecemos transporte terrestre y logística integral, moviendo contenedores con seguridad y eficiencia. Nuestros 8 años de experiencia garantizan servicio personalizado, trazabilidad total y adaptabilidad.</p><ul><li>Unidades de modelos recientes.</li><li>Sistema de rastreo satelital.</li><li>Sistema Anti Jammer.</li><li>Botón de pánico.</li><li>Bloqueo de motor.</li><li>Póliza de seguro cobertura amplia.</li> <li>Unidades con autorización expresa doble articulado.</li></ul>',
+            'service-rute_detail': '<p><strong>Detalle del Servicio:</strong></p><p>FALTA DESCRIPCION DEL SERVICIO</p><ul><li>Rastreos satelitales con la empresa SKYGUARDIAN, lideres en geo localización.</li><li>Salidas en tiempo.</li><li>Actualización de estatus con la frecuencia que se solicite.</li><li>Notificaciones en tiempo real.</li><li>Reportes detallados de ruta.</li><li>Análisis de ruta (paradas autorizadas, focos rojos).</li><li>Comunicación Efectiva.</li></ul>',
+            'service_infra_detail': '<p><strong>Detalle del Servicio:</strong></p><p>FALTA DESCRIPCION DEL SERVICIO</p><ul><li>Área de 2.7 hectáreas</li><li>Control de acceso</li><li>Barda perimetral</li><li>Iluminación</li><li>CCTV</li><li>A solo 3.84km de la salida del puerto</li></ul>',
+            'detail-patio': '<div class="col-md-6"><ul><li>Área de 2.7 hectáreas</li><li>Control de acceso</li><li>Barda perimetral</li></ul></div><div class="col-md-6"><ul><li>Iluminación</li><li>CCTV</li><li>A solo 3.84km de la salida del puerto</li></ul></div>',
+            'boton-galeria': '📸 Ver Infraestructura y Fotos del Patio'
         },
         'en': {
             'nav_about': 'About Us',
@@ -108,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'step4_text': 'Secure unloading and final confirmation.',
             'contact_title': 'Contact Us',
             'contact_cta': 'Send Inquiry',
-            'footer_email': 'Email: operaciones@ptransl.com',
+            'footer_email': 'Email: rmunoz@ptransl.com',
             'footer_phone': 'Phone: +52 753 102 9665',
             'footer_social_title': 'Follow Us',
             'footer_copy': '© 2025 Port Trans Logistic. All rights reserved.',
@@ -133,7 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'unit_economico': 'UNIT ID',
             'unit_operador': 'OPERATOR NAME',
             'unit_licencia': 'LICENSE NUMBER',
-            'contact_wha_button': 'Contact on WhatsApp'
+            'contact_wha_button': 'Contact on WhatsApp',
+            'service_terrestre_detail': '<p><strong>Service Details:</strong></p><p>We offer ground transportation and comprehensive logistics, moving containers with safety and efficiency. Our 8 years of experience guarantee personalized service, total traceability, and adaptability.</p><ul><li>Units of recent models.</li><li>Satellite tracking system.</li><li>Anti-Jammer system.</li><li>Panic button.</li><li>Engine lock.</li><li>Comprehensive insurance policy.</li> <li>Units with express double articulation authorization.</li></ul>',
+            'service-rute_detail': '<p><strong>Service Details:</strong></p><p>SERVICE DESCRIPTION PENDING</p><ul><li>Satellite tracking with leading geolocation companie SKYGUARDIAN.</li><li>On-time departures.</li><li>Status updates as frequently as requested.</li><li>Real-time notifications.</li><li>Detailed route reports.</li><li>Route analysis (authorized stops, red flags).</li><li>Effective communication.</li></ul>',
+            'service_infra_detail': '<p><strong>Service Details:</strong></p><p>SERVICE DESCRIPTION PENDING</p><ul><li>Area of 2.7 hectares</li><li>Access control</li><li>Perimeter wall</li><li>Lighting</li><li>CCTV</li><li>Only 3.84km from the port exit</li></ul>',
+            'detail-patio': '<div class="col-md-6"><ul><li>Area of 2.7 hectares</li><li>Access control</li><li>Perimeter wall</li></ul></div><div class="col-md-6"><ul><li>Lighting</li><li>CCTV</li><li>Only 3.84km from the port exit</li></ul></div>',
+            'boton-galeria': '📸 View Yard Infrastructure and Photos'
         }
     };
 

@@ -73,12 +73,13 @@
                     🔷 Ubicados en el puerto de Lázaro Cárdenas,Michoacán. <br>
                     🔷 Certificados en norma ISO 9001:2015. <br>
                 </p>
+                <img src="iso.jpg" alt="ISO 9001:2015" style="width: 150px; margin-top: 20px;">
             </div>
         </section>
 
         <hr class="separator my-5">
 
-        <section id="servicios" class="services-section bakg py-5">
+        <!--<section id="servicios" class="services-section bakg py-5">
             <div class="container text-center">
                 <h3 class="h1 fw-bold mb-5" data-lang-key="services_title" style="text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; ">Nuestros Servicios</h3>
                 <div class="row g-4">
@@ -86,23 +87,105 @@
                         <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" data-bs-toggle="modal" data-bs-target="#modalTerrestre">
                             <i class="fa-solid fa-truck-fast service-icon mb-3"></i>
                             <h4 class="h5 fw-bold" data-lang-key="service_terrestre_title">Transporte Terrestre</h4>
-                            <p class="text-secondary" data-lang-key="service_terrestre_text_short">Rutas optimizadas y la flota más moderna...</p>
+                            <p class="txt-secon" data-lang-key="service_terrestre_text_short">Rutas optimizadas y la flota más moderna...</p>
+                        </button>
+                    </div>
+                     <div class="col-md-4 fade-in-up">
+                        <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" 
+                            style="
+                            background-image: radial-gradient(circle, #ffffffb7 10%, #3b419500 90%),url('./fondoserv1.jpeg'); 
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            align-items: flex-end;" 
+                            data-bs-toggle="modal" data-bs-target="#modalRuta">
+                            <i class="fa-solid fa-route service-icon mb-3"></i> 
+                            <h4 class="h5 fw-bold" data-lang-key="service_control_title">Control de Ruta Inteligente</h4>
+                            <p class="txt-secon" data-lang-key="service_control_text">Monitoreo en tiempo real 24/7 y sistemas GPS avanzados para asegurar la trazabilidad y eficiencia total de su envío.</p>
                         </button>
                     </div>
                     <div class="col-md-4 fade-in-up">
-                        <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" data-bs-toggle="modal" data-bs-target="#modalRuta">
-                            <i class="fa-solid fa-route service-icon mb-3"></i>
-                            <h4 class="h5 fw-bold" data-lang-key="service_control_title">Control de Ruta Inteligente</h4>
-                            <p class="text-secondary" data-lang-key="service_control_text">Monitoreo en tiempo real 24/7 y sistemas GPS avanzados para asegurar la trazabilidad y eficiencia total de su envío.</p>
+                        <button href="#" 
+                            class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-end text-center" 
+                            style="
+                                background-image: radial-gradient(circle, #ffffffb7 10%, #3b419500 90%),url('./fondoserv1.jpeg'); 
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalRuta">
+                            
+                            <h4 class="h5 fw-bold text-white" data-lang-key="service_control_title">Control de Ruta Inteligente</h4>
+                            <p class="text-white small" data-lang-key="service_control_text">Monitoreo en tiempo real 24/7 y sistemas GPS avanzados para asegurar la trazabilidad y eficiencia total de su envío.</p>
                         </button>
                     </div>
                     <div class="col-md-4 fade-in-up">
                         <button href="#" class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100" data-bs-toggle="modal" data-bs-target="#modalPatio">
                             <i class="fa-solid fa-warehouse service-icon mb-3"></i>
                             <h4 class="h5 fw-bold" data-lang-key="service_infra_title">Infraestructura en Patio</h4>
-                            <p class="text-secondary" data-lang-key="service_infra_text">Espacios seguros y optimizados para el manejo, inspección y resguardo temporal de su mercancía.</p>
+                            <p class="txt-secon" data-lang-key="service_infra_text">Espacios seguros y optimizados para el manejo, inspección y resguardo temporal de su mercancía.</p>
                         </button>
                     </div>
+                </div>
+            </div>
+        </section>-->
+
+        <section id="servicios" class="services-section bakg py-5">
+            <div class="container text-center">
+                <h3 class="h1 fw-bold mb-5" data-lang-key="services_title" style="text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; ">Nuestros Servicios</h3>
+                <div class="row g-4">
+                    
+                    <div class="col-md-4 fade-in-up">
+                        <button href="#" 
+                            class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-end text-center" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalTerrestre">
+                            
+                            <div class="align-self-center w-100">
+                                <i class="fa-solid fa-truck-fast service-icon mb-3"></i>
+                                <h4 class="h5 fw-bold" data-lang-key="service_terrestre_title">Transporte Terrestre</h4>
+                                <p class="txt-secon" data-lang-key="service_terrestre_text_short">Rutas optimizadas y la flota más moderna...</p>
+                            </div>
+                        </button>
+                    </div>
+                    
+                    <div class="col-md-4 fade-in-up">
+                        <!-- <button href="#" 
+                            class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-end text-center" 
+                            style="
+                                background-image: radial-gradient(circle, #ffffffb7 10%, #3b419500 90%),url('./fondoserv1.jpeg'); 
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalRuta">
+                            <h4 class="h5 fw-bold text-white" data-lang-key="service_control_title">Control de Ruta Inteligente</h4>
+                            <p class="text-white small" data-lang-key="service_control_text">Monitoreo en tiempo real 24/7 y sistemas GPS avanzados para asegurar la trazabilidad y eficiencia total de su envío.</p>
+                        </button> -->
+
+                        <button href="#" 
+                            class="service-item-trigger service-bg-1 d-block p-4 rounded shadow-sm h-100 d-flex flex-column justify-content-end text-center" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalRuta">
+                            <h4 class="h5 fw-bold titulo" data-lang-key="service_control_title">Control de Ruta Inteligente</h4>
+                            <p class="txt-secon" data-lang-key="service_control_text">Monitoreo en tiempo real 24/7 y sistemas GPS avanzados para asegurar la trazabilidad y eficiencia total de su envío.</p>
+                        </button>
+                    </div>
+                    
+                    <div class="col-md-4 fade-in-up">
+                        <button href="#" 
+                            class="service-item-trigger d-block p-4 bg-white rounded shadow-sm h-100 d-flex flex-column justify-content-end text-center" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalPatio">
+                            
+                            <div class="align-self-center w-100">
+                                <i class="fa-solid fa-warehouse service-icon mb-3"></i>
+                                <h4 class="h5 fw-bold" data-lang-key="service_infra_title">Infraestructura en Patio</h4>
+                                <p class="txt-secon" data-lang-key="service_infra_text">Espacios seguros y optimizados para el manejo, inspección y resguardo temporal de su mercancía.</p>
+                            </div>
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -242,7 +325,7 @@
                             <input type="email" class="form-control mb-3" placeholder="Email o Teléfono" required>
                             <button type="submit" class="btn btn-primary-custom w-100" data-lang-key="contact_cta_button">Hablar con un experto</button>
                             <br>
-                            <button type="submit" href="https://wa.me/525512345678?text=Hola%2C%20me%20gustaria%20saber%20mas%20informacion" data-lang-key="contact_wha_button" target="_blank" aria-label="Contactar por WhatsApp" class="btn btn-success-custom w-100">Contactar por WhatsApp</button>
+                            <button href="https://wa.me/+527531029665?text=Hola%2C%20me%20gustaria%20saber%20mas%20informacion%20sobre%20los%20servicios%20y%20costos%20en%20Port%20Trans.%20Gracias." data-lang-key="contact_wha_button" target="_blank" aria-label="Contactar por WhatsApp" class="btn w-100">Contactar por WhatsApp</button>
                         </form>
                     </div>
 
@@ -260,16 +343,16 @@
                 <h5 class="modal-title fw-bold text-primary-custom" id="modalTerrestreLabel">Transporte Terrestre</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" data-lang-key="service_terrestre_detail">
                 <p><strong>Detalle del Servicio:</strong></p>
-                <p>FALTA DESCRIPCION DEL SERVICIO</p>
+                <p>Port Trans Logistic ofrece transporte terrestre y logística personalizada, con más de ocho años de experiencia. Garantiza eficiencia, seguridad y trazabilidad, adaptándose a cada carga y proyecto, priorizando la excelencia y relaciones comerciales duraderas.</p>
                 <ul>
                     <li>Unidades de modelos recientes.</li>
                     <li>Sistema de rastreo satelital.</li>
                     <li>Sistema Anti Jammer.</li>
                     <li>Botón de pánico.</li>
                     <li>Bloqueo de motor.</li>
-                    <li>Póliza de seguro covertura amplia.</li> 
+                    <li>Póliza de seguro cobertura amplia.</li> 
                     <li>Unidades con autorización expresa doble articulado.</li>
                 </ul>
             </div>
@@ -288,11 +371,11 @@
                 <h5 class="modal-title fw-bold text-primary-custom" id="modalRutaLabel">Control de Ruta Inteligente</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" data-lang-key="service-rute_detail">
                 <p><strong>Detalle del Servicio:</strong></p>
                 <p>FALTA DESCRIPCION DEL SERVICIO</p>
                 <ul>
-                    <li>Rastreos satelitales con las empresas SKY ANGEL, SITRACK y ENCOTRACK lideres en geo localización.</li>
+                    <li>Rastreos satelitales con la empresa SKYGUARDIAN lideres en geo localización.</li>
                     <li>Salidas en tiempo.</li>
                     <li>Actualización de estatus con la frecuencia que se solicite.</li>
                     <li>Notificaciones en tiempo real.</li>
@@ -309,16 +392,15 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalPatio" tabindex="-1" aria-labelledby="modalPatioLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="modalPatio" tabindex="-1" aria-labelledby="modalPatioLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
             <div class="modal-header border-0">
                 <h5 class="modal-title fw-bold text-primary-custom" id="modalPatioLabel">Infraestructura en Patio</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" data-lang-key="service_infra_detail">
                 <p><strong>Detalle del Servicio:</strong></p>
-                <p>FALTA DESCRIPCION DEL SERVICIO</p>
                 <ul>
                     <li>Área de 2.7 hectáreas</li>
                     <li>Control de acceso</li>
@@ -334,8 +416,100 @@
             </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="modal fade" id="modalPatio" tabindex="-1" aria-labelledby="modalPatioLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold text-primary-custom" id="modalPatioLabel">Infraestructura en Patio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    
+                    <div class="accordion mb-4" id="accordionPatioGallery">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" data-lang-key="boton-galeria">
+                                    📸 Ver Infraestructura y Fotos del Patio
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionPatioGallery">
+                                <div class="accordion-body">
+                                    <div class="row g-2 gallery-grid">
+                                        <div class="col-4">
+                                            <a href="./patio/DJI_0268.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-photo-src="./patio/DJI_0268.jpg" data-photo-alt="Vista aérea del patio">
+                                                <img src="./patio/DJI_0268.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Vista aérea del patio">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="./patio/DJI_0279.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-photo-src="./patio/DJI_0279.jpg" data-photo-alt="Vista aérea del patio">
+                                                <img src="./patio/DJI_0279.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Vista aérea del patio">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="./patio/DJI_0280.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-photo-src="./patio/DJI_0280.jpg" data-photo-alt="Vista aérea del patio">
+                                                <img src="./patio/DJI_0280.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Vista aérea del patio">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="./patio/DJI_0282.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-photo-src="./patio/DJI_0282.jpg" data-photo-alt="Vista aérea del patio">
+                                                <img src="./patio/DJI_0282.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Vista aérea del patio">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-3"><strong>Detalle del Servicio:</strong></p>
+                    
+                    <div class="row" data-lang-key="detail-patio">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Área de 2.7 hectáreas</li>
+                                <li>Control de acceso</li>
+                                <li>Barda perimetral</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Iluminación</li>
+                                <li>CCTV</li>
+                                <li>A solo 3.84km de la salida del puerto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-primary-custom">Cotizar</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <a href="https://wa.me/525512345678?text=Hola%2C%20me%20gustaria%20saber%20mas%20informacion" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 p-0">
+                    <button 
+                        type="button" 
+                        class="btn-close btn-close-red" 
+                        data-bs-dismiss="modal" 
+                        aria-label="Close"
+                        data-bs-toggle="modal"         data-bs-target="#modalPatio"   ></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="" id="lightboxImage" class="img-fluid rounded" alt="Imagen ampliada">
+                    <p id="lightboxCaption" class="mt-2 text-white"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/+527531029665?text=Hola%2C%20me%20gustaria%20saber%20mas%20informacion%20sobre%20los%20servicios%20y%20costos%20en%20Port%20Trans.%20Gracias." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -344,7 +518,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-md-6 footer-info mb-3 mb-md-0">
                     <h4 class="text-primary-custom mb-2">Port Trans Logistic</h4>
-                    <p class="text-secondary-custom small mb-0" data-lang-key="footer_email">Email: operaciones@ptransl.com</p>
+                    <p class="text-secondary-custom small mb-0" data-lang-key="footer_email">Email: rmunoz@ptransl.com</p>
                     <p class="text-secondary-custom small" data-lang-key="footer_phone">Tel: +52 753 102 9665</p>
                 </div>
                 <div class="col-md-6 footer-social text-md-end">
